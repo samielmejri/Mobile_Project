@@ -1,0 +1,28 @@
+<!-- res/layout/activity_add_edit_quiz.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/quiz_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Quiz Title"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/quiz_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Quiz Description"
+        android:minHeight="48dp" />
+
+    <Button
+        android:id="@+id/save_quiz_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Save" />
+</LinearLayout>

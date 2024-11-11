@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="#F3F3F3"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/certificateTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Certificate of Completion"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#4CAF50"
+        android:paddingBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/certificateQuizTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quiz Title"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:paddingBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/certificateScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Score: 0"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:paddingBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/certificateMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You are a champion!"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/retryQuizButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Retry Quiz"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#4CAF50"
+        android:textColor="#FFFFFF"/>
+</LinearLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/editTextTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Title" />
+
+        <EditText
+            android:id="@+id/editTextCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Category"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/editTextDifficultyLevel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Difficulty Level (e.g., Beginner, Intermediate, Advanced)"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/editTextPdfUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="PDF URL"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/editTextVideoUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="YouTube Video URL"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/buttonSaveCourse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save Course"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+</ScrollView>

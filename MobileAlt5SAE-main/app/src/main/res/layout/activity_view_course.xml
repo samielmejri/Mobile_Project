@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Course Title"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/textViewDifficultyLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Difficulty Level"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/buttonViewPdf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View PDF Document"
+            android:layout_marginTop="16dp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/buttonViewVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Watch Video"
+            android:layout_marginTop="8dp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</ScrollView>

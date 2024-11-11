@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Question Text -->
+    <EditText
+        android:id="@+id/question_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter question text" />
+
+    <!-- Question Category -->
+    <EditText
+        android:id="@+id/question_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter category" />
+
+    <!-- Options -->
+    <EditText
+        android:id="@+id/option1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Option 1" />
+
+    <EditText
+        android:id="@+id/option2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Option 2" />
+
+    <EditText
+        android:id="@+id/option3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Option 3" />
+
+    <EditText
+        android:id="@+id/option4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Option 4" />
+
+    <!-- Checkboxes for Correct Answers -->
+    <CheckBox
+        android:id="@+id/checkbox_option1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Correct Answer for Option 1" />
+
+    <CheckBox
+        android:id="@+id/checkbox_option2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Correct Answer for Option 2" />
+
+    <CheckBox
+        android:id="@+id/checkbox_option3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Correct Answer for Option 3" />
+
+    <CheckBox
+        android:id="@+id/checkbox_option4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Correct Answer for Option 4" />
+
+    <!-- Save Button -->
+    <Button
+        android:id="@+id/save_question_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save" />
+
+</LinearLayout>

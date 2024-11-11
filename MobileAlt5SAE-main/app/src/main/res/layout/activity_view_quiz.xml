@@ -1,0 +1,64 @@
+<!-- res/layout/activity_view_quiz.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/quizTitleLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quiz Title:"
+        android:textSize="18sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/quizTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:textSize="18sp"
+        android:layout_below="@id/quizTitleLabel"
+        android:layout_alignStart="@id/quizTitleLabel"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/quizDescriptionLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quiz Description:"
+        android:textSize="18sp"
+        android:layout_below="@id/quizTitleTextView"
+        android:layout_alignStart="@id/quizTitleLabel"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/quizDescriptionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:textSize="18sp"
+        android:layout_below="@id/quizDescriptionLabel"
+        android:layout_alignStart="@id/quizTitleLabel"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Add this LinearLayout to hold the questions -->
+    <LinearLayout
+        android:id="@+id/questionsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/quizDescriptionTextView"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/addQuestionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Question"
+        android:layout_below="@id/questionsContainer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+</RelativeLayout>
