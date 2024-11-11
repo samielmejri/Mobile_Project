@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.DayNight"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".activity.AddQuestionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ViewQuizActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.AddEditQuestionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.AddEditQuizActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.QuizListActivity"
+            android:exported="true">
+
+        </activity>
+
+        <activity
+            android:name=".activity.ViewTestActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.AddEditTestActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.TestListActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.ViewCourseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.AddEditCourseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.CourseListActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.ViewProgramActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.AddEditProgramActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ProgramListActivity"
+            android:exported="true" >
+
+        </activity>
+        <activity
+            android:name=".activity.CreatePostActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Adapters.PostAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ViewForumActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.AddEditForumActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ForumListActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.testActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.DashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ResetPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.EmailConfirmationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:exported="true" />
+    </application>
+
+</manifest>

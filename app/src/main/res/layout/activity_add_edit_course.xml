@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#F7F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Title EditText with padding and text color -->
+        <EditText
+            android:id="@+id/editTextTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Title"
+            android:padding="16dp"
+            android:textColor="#413B61"
+            android:textColorHint="#B3B3B3"
+            android:backgroundTint="#AE7DAC"
+            android:layout_marginTop="12dp"/>
+
+        <!-- Category EditText with padding and text color -->
+        <EditText
+            android:id="@+id/editTextCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Category"
+            android:layout_marginTop="12dp"
+            android:padding="16dp"
+            android:textColor="#413B61"
+            android:textColorHint="#B3B3B3"
+            android:backgroundTint="#AE7DAC"/>
+
+        <!-- Difficulty Level EditText with padding and text color -->
+        <EditText
+            android:id="@+id/editTextDifficultyLevel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Difficulty Level (e.g., Beginner, Intermediate, Advanced)"
+            android:layout_marginTop="12dp"
+            android:padding="16dp"
+            android:textColor="#413B61"
+            android:textColorHint="#B3B3B3"
+            android:backgroundTint="#AE7DAC"/>
+
+        <!-- PDF URL EditText with padding and text color -->
+        <EditText
+            android:id="@+id/editTextPdfUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="PDF URL"
+            android:layout_marginTop="12dp"
+            android:padding="16dp"
+            android:textColor="#413B61"
+            android:textColorHint="#B3B3B3"
+            android:backgroundTint="#AE7DAC"/>
+
+        <!-- YouTube Video URL EditText with padding and text color -->
+        <EditText
+            android:id="@+id/editTextVideoUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="YouTube Video URL"
+            android:layout_marginTop="12dp"
+            android:padding="16dp"
+            android:textColor="#413B61"
+            android:textColorHint="#B3B3B3"
+            android:backgroundTint="#AE7DAC"/>
+
+        <!-- Save Button with solid color background -->
+        <Button
+            android:id="@+id/buttonSaveCourse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save Course"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="24dp"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="#F1916D"
+            android:padding="14dp"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp"/>
+    </LinearLayout>
+</ScrollView>

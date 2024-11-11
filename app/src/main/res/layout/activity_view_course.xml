@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#F4F4F4">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#FFFFFF"
+        android:elevation="4dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:radius="8dp">
+
+        <!-- Course Title -->
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Course Title"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#2C3E50"
+            android:layout_marginBottom="12dp"
+            android:layout_gravity="start" />
+
+        <!-- Category -->
+        <TextView
+            android:id="@+id/textViewCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category: Programming"
+            android:textSize="16sp"
+            android:textColor="#7F8C8D"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Difficulty Level -->
+        <TextView
+            android:id="@+id/textViewDifficultyLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Difficulty Level: Intermediate"
+            android:textSize="16sp"
+            android:textColor="#7F8C8D"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Button for PDF Document -->
+        <Button
+            android:id="@+id/buttonViewPdf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View PDF Document"
+            android:textSize="16sp"
+            android:backgroundTint="#AE7DAC"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"
+            android:layout_gravity="center_horizontal"
+            android:padding="12dp"
+            android:elevation="6dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Button for Watch Video -->
+        <Button
+            android:id="@+id/buttonViewVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Watch Video"
+            android:textSize="16sp"
+            android:backgroundTint="#413B61"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            android:layout_gravity="center_horizontal"
+            android:padding="12dp"
+            android:elevation="6dp" />
+
+    </LinearLayout>
+</ScrollView>

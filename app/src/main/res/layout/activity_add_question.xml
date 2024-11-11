@@ -1,0 +1,23 @@
+<!-- res/layout/activity_add_question.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/questionTextEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Question Text"
+        android:inputType="text"
+        android:padding="8dp"
+        android:minHeight="48dp"/>
+
+    <Button
+        android:id="@+id/saveQuestionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save Question"
+        android:layout_marginTop="16dp"/>
+</LinearLayout>
