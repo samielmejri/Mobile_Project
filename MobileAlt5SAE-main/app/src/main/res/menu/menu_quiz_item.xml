@@ -1,0 +1,16 @@
+<!-- res/menu/menu_quiz_item.xml -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_view"
+        android:title="View" />
+    <item
+        android:id="@+id/menu_edit"
+        android:title="Edit" />
+    <item
+        android:id="@+id/menu_delete"
+        android:title="Delete" />
+
+    <item
+        android:id="@+id/menu_pass_quiz"
+        android:title="Pass Quiz" />
+</menu>
