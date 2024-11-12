@@ -59,27 +59,26 @@ android {
 }
 
 dependencies {
+    // Material Design for navigation and drawer components
+    implementation("com.google.android.material:material:1.9.0")
+
+    // AndroidX dependencies
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("androidx.drawerlayout:drawerlayout:1.1.1")
+
+    // ConstraintLayout for layout support
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+
+    // Add other dependencies that might be necessary for your project
     implementation(libs.javamail)
     implementation(libs.activation)
     implementation(libs.bcrypt)
-    implementation(libs.appcompat)
-    implementation(libs.material)
     implementation(libs.activity)
-    implementation(libs.constraintlayout)
-    implementation(libs.volley)
-    implementation(libs.room.common)
-    implementation(libs.room.runtime)
     implementation(libs.recyclerview)
+    implementation(libs.room.runtime)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
     annotationProcessor(libs.room.compiler)
     implementation("com.google.code.gson:gson:2.8.8")
-
-    // Explicit ConstraintLayout dependency addition if needed
-    implementation("androidx.constraintlayout:constraintlayout:2.1.0")  // Ensure this is added if it's not included via libs
-
-    implementation ("androidx.constraintlayout:constraintlayout:2.1.4")
-    implementation ("androidx.appcompat:appcompat:1.6.1")  // Make sure this is included for basic UI components
-
 }

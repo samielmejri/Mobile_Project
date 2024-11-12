@@ -16,7 +16,7 @@ import com.example.user_module.ViewModal.ForumViewModel;
 
 import java.util.List;
 
-public class ForumListActivity extends AppCompatActivity {
+public class ForumListActivity extends BaseActivity {
 
     private RecyclerView recyclerViewForums;
     private Button buttonAddForum;

@@ -112,10 +112,11 @@ public class LoginActivity extends AppCompatActivity {
                 // Password matches
                 runOnUiThread(() -> {
                     Toast.makeText(LoginActivity.this, "Login successful", Toast.LENGTH_SHORT).show();
-                    // Navigate to the next screen, e.g., HomeActivity
-                    Intent intent = new Intent(LoginActivity.this, DashboardActivity.class); // Replace with the target activity
+
+                    // Redirect to Course Management Activity
+                    Intent intent = new Intent(LoginActivity.this, CourseListActivity.class); // Replace with your Course Management Activity
                     startActivity(intent);
-                    finish();
+                    finish(); // Close the LoginActivity to prevent going back to login screen
                 });
             } else {
                 // Email not found or password does not match
@@ -124,3 +125,4 @@ public class LoginActivity extends AppCompatActivity {
         }).start();
     }
 }
+

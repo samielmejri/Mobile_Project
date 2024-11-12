@@ -1,0 +1,19 @@
+<!-- sidebar_menu.xml -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_courses"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="Courses" />
+    <item
+        android:id="@+id/nav_programs"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="Programs" />
+    <item
+        android:id="@+id/nav_forum"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="Forum" />
+    <item
+        android:id="@+id/nav_quizzes"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="Quizzes" />
+</menu>

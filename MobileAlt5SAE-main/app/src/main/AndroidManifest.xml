@@ -15,60 +15,56 @@
         android:usesCleartextTraffic="true">
         <activity
             android:name=".activity.AddQuestionActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".activity.ViewQuizActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".activity.AddEditQuestionActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".activity.AddEditQuizActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".activity.QuizListActivity"
             android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <activity
             android:name=".activity.ViewTestActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".activity.AddEditTestActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".activity.TestListActivity"
             android:exported="true" />
         <activity
             android:name=".activity.ViewCourseActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".activity.AddEditCourseActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".activity.CourseListActivity"
             android:exported="true" />
         <activity
             android:name=".activity.ViewProgramActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".activity.AddEditProgramActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".activity.ProgramListActivity"
             android:exported="true" >
         </activity>
         <activity
             android:name=".activity.CreatePostActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Adapters.PostAdapter"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".activity.ViewForumActivity"
             android:exported="false" />
@@ -80,22 +76,28 @@
             android:exported="true" />
         <activity
             android:name=".activity.testActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".activity.ProfileActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".activity.DashboardActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".activity.ResetPasswordActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".activity.EmailConfirmationActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".activity.LoginActivity"
-            android:exported="false" />
+            android:exported="true">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity
             android:name=".activity.RegisterActivity"
             android:exported="true" />

@@ -24,7 +24,7 @@ import java.util.concurrent.Executors;
 
 import android.util.Log;
 
-public class QuizListActivity extends AppCompatActivity {
+public class QuizListActivity extends BaseActivity {
 
     private LinearLayout quizListContainer;
     private Button buttonAddQuiz;

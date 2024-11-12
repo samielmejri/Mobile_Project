@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+
     <item
-        android:id="@+id/menu_profile"
-        android:title="Profile"/>
+        android:id="@+id/nav_course"
+        android:title="Course Management"
+        android:icon="@drawable/ic_launcher_foreground" />
+
+    <item
+        android:id="@+id/nav_forum"
+        android:title="Forum Management"
+        android:icon="@drawable/ic_launcher_foreground" />
+
+    <item
+        android:id="@+id/nav_program"
+        android:title="Program Management"
+        android:icon="@drawable/ic_launcher_foreground" />
+
+    <item
+        android:id="@+id/nav_quiz"
+        android:title="Quiz Management"
+        android:icon="@drawable/ic_launcher_foreground" />
 </menu>

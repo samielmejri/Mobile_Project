@@ -17,8 +17,9 @@ import com.example.user_module.entity.Program;
 
 import java.util.Calendar;
 import java.util.List;
+import android.os.Bundle;
 
-public class ProgramListActivity extends AppCompatActivity {
+public class ProgramListActivity extends BaseActivity {
 
     private RecyclerView recyclerViewPrograms;
     private Button buttonAddProgram;

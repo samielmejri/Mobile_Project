@@ -3,18 +3,14 @@ package com.example.user_module.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.user_module.Adapters.CourseAdapter;
 import com.example.user_module.AppDatabase;
 import com.example.user_module.R;
-import com.example.user_module.entity.Course;
 
-import java.util.List;
-
-public class CourseListActivity extends AppCompatActivity {
+public class CourseListActivity extends BaseActivity {
 
     private RecyclerView recyclerViewCourses;
     private Button buttonAddCourse;
@@ -23,8 +19,12 @@ public class CourseListActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_course_list);
 
+        // Inflate the layout for this activity into the content frame
+        getLayoutInflater().inflate(R.layout.activity_course_list, findViewById(R.id.content_frame));
+        setTitle("Courses"); // Set the title for the toolbar
+
+        // Initialize your views as before
         recyclerViewCourses = findViewById(R.id.recyclerViewCourses);
         buttonAddCourse = findViewById(R.id.buttonAddCourse);
 
