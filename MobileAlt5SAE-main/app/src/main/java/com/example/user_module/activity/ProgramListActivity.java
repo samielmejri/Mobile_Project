@@ -6,7 +6,6 @@ import android.widget.Button;
 import android.widget.CalendarView;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -16,8 +15,6 @@ import com.example.user_module.R;
 import com.example.user_module.entity.Program;
 
 import java.util.Calendar;
-import java.util.List;
-import android.os.Bundle;
 
 public class ProgramListActivity extends BaseActivity {
 
@@ -38,7 +35,10 @@ public class ProgramListActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_program_list);
+
+        // Inflate the layout for this activity into the content frame
+        getLayoutInflater().inflate(R.layout.activity_program_list, findViewById(R.id.content_frame));
+        setTitle("Programs"); // Set the title for the toolbar
 
         recyclerViewPrograms = findViewById(R.id.recyclerViewPrograms);
         buttonAddProgram = findViewById(R.id.buttonAddProgram);

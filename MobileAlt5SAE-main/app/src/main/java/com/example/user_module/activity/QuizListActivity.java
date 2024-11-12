@@ -2,18 +2,13 @@ package com.example.user_module.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Gravity;
-import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.user_module.AppDatabase;
 import com.example.user_module.R;
@@ -21,14 +16,16 @@ import com.example.user_module.entity.Quiz;
 
 import java.util.List;
 import java.util.concurrent.Executors;
-
 import android.util.Log;
+import android.view.Gravity;
+import android.widget.PopupMenu;
 
 public class QuizListActivity extends BaseActivity {
 
     private LinearLayout quizListContainer;
     private Button buttonAddQuiz;
 
+    // Register an ActivityResultLauncher for add/edit quiz activity
     private final ActivityResultLauncher<Intent> addEditQuizLauncher = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
             result -> {
@@ -40,17 +37,22 @@ public class QuizListActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quiz_list);
+
+        // Inflate the layout for this activity within the BaseActivity content frame
+        getLayoutInflater().inflate(R.layout.activity_quiz_list, findViewById(R.id.content_frame));
+        setTitle("Quizzes"); // Set title for the toolbar
 
         quizListContainer = findViewById(R.id.quizListContainer);
         buttonAddQuiz = findViewById(R.id.buttonAddQuiz);
 
+        // Load quizzes initially
+        loadQuizzes();
+
+        // Set listener to open AddEditQuizActivity for adding a quiz
         buttonAddQuiz.setOnClickListener(v -> {
             Intent intent = new Intent(this, AddEditQuizActivity.class);
             addEditQuizLauncher.launch(intent);
         });
-
-        loadQuizzes();
     }
 
     private void loadQuizzes() {
@@ -114,10 +116,8 @@ public class QuizListActivity extends BaseActivity {
         popupMenu.show();
     }
 
-
     private void passQuiz(Quiz quiz) {
-        Log.d("QuizActivity", "Starting Pass Quiz for quiz ID: " + quiz.getId()); // Log the quiz ID
-        // Intent to launch the activity where the user will take the quiz
+        Log.d("QuizActivity", "Starting Pass Quiz for quiz ID: " + quiz.getId());
         Intent intent = new Intent(this, TakeQuizActivity.class);
         intent.putExtra("quizId", quiz.getId()); // Pass the quiz ID to the activity
         startActivity(intent);

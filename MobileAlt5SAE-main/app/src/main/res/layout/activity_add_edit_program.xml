@@ -20,8 +20,8 @@
         android:hint="Program Description"
         android:minHeight="48dp" />
 
-    <EditText
-        android:id="@+id/editTextType"
+    <Spinner
+        android:id="@+id/spinnerProgramType"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Program Type (e.g., Seminar, Activity, Hackathon)"

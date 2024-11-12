@@ -4,17 +4,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.user_module.Adapters.ForumAdapter;
 import com.example.user_module.R;
-import com.example.user_module.entity.Forum;
 import com.example.user_module.ViewModal.ForumViewModel;
-
-import java.util.List;
 
 public class ForumListActivity extends BaseActivity {
 
@@ -26,7 +22,10 @@ public class ForumListActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_forum_list);
+
+        // Inflate the layout for this activity into the content frame of the BaseActivity
+        getLayoutInflater().inflate(R.layout.activity_forum_list, findViewById(R.id.content_frame));
+        setTitle("Forums"); // Set the title for the toolbar
 
         recyclerViewForums = findViewById(R.id.recyclerViewForums);
         buttonAddForum = findViewById(R.id.buttonAddForum);
@@ -43,12 +42,9 @@ public class ForumListActivity extends BaseActivity {
             recyclerViewForums.setAdapter(forumAdapter);
         });
 
-        buttonAddForum.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ForumListActivity.this, AddEditForumActivity.class);
-                startActivity(intent);
-            }
+        buttonAddForum.setOnClickListener(v -> {
+            Intent intent = new Intent(ForumListActivity.this, AddEditForumActivity.class);
+            startActivity(intent);
         });
     }
 }

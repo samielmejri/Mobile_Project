@@ -3,9 +3,12 @@ package com.example.user_module.activity;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.user_module.AppDatabase;
@@ -19,11 +22,12 @@ import java.util.concurrent.Executors;
 
 public class AddEditProgramActivity extends AppCompatActivity {
 
-    private EditText editTextName, editTextDescription, editTextType;
+    private EditText editTextName, editTextDescription;
+    private Spinner spinnerProgramType;  // Change from EditText to Spinner
     private EditText editTextStartDate, editTextEndDate;
     private Button buttonSaveProgram;
-    private int programId = -1; // Default -1 indicates a new program
-    private long startDate = 0, endDate = 0; // Timestamps for start and end dates
+    private int programId = -1;
+    private long startDate = 0, endDate = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,14 +36,20 @@ public class AddEditProgramActivity extends AppCompatActivity {
 
         editTextName = findViewById(R.id.editTextName);
         editTextDescription = findViewById(R.id.editTextDescription);
-        editTextType = findViewById(R.id.editTextType);
+        spinnerProgramType = findViewById(R.id.spinnerProgramType);  // Initialize Spinner
         editTextStartDate = findViewById(R.id.editTextStartDate);
         editTextEndDate = findViewById(R.id.editTextEndDate);
         buttonSaveProgram = findViewById(R.id.buttonSaveProgram);
 
         programId = getIntent().getIntExtra("programId", -1);
 
-        // Load program data if editing an existing program
+        // Set up the Spinner with predefined program types
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.program_types, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerProgramType.setAdapter(adapter);
+
+        // Load program data if editing
         if (programId != -1) {
             loadProgramData();
         }
@@ -64,9 +74,14 @@ public class AddEditProgramActivity extends AppCompatActivity {
             if (program != null) {
                 editTextName.setText(program.getName());
                 editTextDescription.setText(program.getDescription());
-                editTextType.setText(program.getType());
 
-                // Populate start and end dates
+                // Set the program type in the Spinner
+                String type = program.getType();
+                ArrayAdapter<CharSequence> adapter = (ArrayAdapter<CharSequence>) spinnerProgramType.getAdapter();
+                int position = adapter.getPosition(type);
+                spinnerProgramType.setSelection(position);
+
+                // Set start and end dates
                 startDate = program.getStartDate();
                 endDate = program.getEndDate();
                 editTextStartDate.setText(formatDate(startDate));
@@ -78,7 +93,7 @@ public class AddEditProgramActivity extends AppCompatActivity {
     private void saveProgram() {
         String name = editTextName.getText().toString().trim();
         String description = editTextDescription.getText().toString().trim();
-        String type = editTextType.getText().toString().trim();
+        String type = spinnerProgramType.getSelectedItem().toString();  // Get selected type from Spinner
 
         if (name.isEmpty() || description.isEmpty() || type.isEmpty() || startDate == 0 || endDate == 0) {
             Toast.makeText(this, "Please fill out all fields", Toast.LENGTH_SHORT).show();
@@ -88,31 +103,30 @@ public class AddEditProgramActivity extends AppCompatActivity {
         Program program = new Program();
         program.setName(name);
         program.setDescription(description);
-        program.setType(type);
+        program.setType(type);  // Set the type to the selected value
         program.setStartDate(startDate);
         program.setEndDate(endDate);
 
         if (programId != -1) {
-            program.setId(programId); // Set the ID for updating
+            program.setId(programId);
         }
 
         Executors.newSingleThreadExecutor().execute(() -> {
             AppDatabase db = AppDatabase.getInstance(this);
             if (programId == -1) {
-                db.programDao().insert(program); // Insert new program
+                db.programDao().insert(program);
             } else {
-                db.programDao().update(program); // Update existing program
+                db.programDao().update(program);
             }
 
             runOnUiThread(() -> {
                 Toast.makeText(this, "Program saved", Toast.LENGTH_SHORT).show();
                 setResult(RESULT_OK);
-                finish(); // Close activity
+                finish();
             });
         });
     }
 
-    // Method to show a DatePickerDialog
     private void showDatePickerDialog(OnDateSelectedListener listener) {
         Calendar calendar = Calendar.getInstance();
         DatePickerDialog datePickerDialog = new DatePickerDialog(
@@ -128,13 +142,11 @@ public class AddEditProgramActivity extends AppCompatActivity {
         datePickerDialog.show();
     }
 
-    // Date formatting helper
     private String formatDate(long timestamp) {
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMM yyyy", Locale.getDefault());
         return dateFormat.format(timestamp);
     }
 
-    // Listener interface for date selection
     private interface OnDateSelectedListener {
         void onDateSelected(long date);
     }
